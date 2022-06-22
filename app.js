@@ -6,7 +6,7 @@ window.onload = function() {
         var time = document.getElementById("time");
         var clock = document.getElementById("clock");
         var audio = document.getElementById("audio");
-    
+            var din = document.getElementById("days")
         function setDate(){
             var today = new Date();
             
@@ -23,12 +23,24 @@ window.onload = function() {
             hourHand.style.transform = `rotate(${hourDeg}deg)`;
             
             time.innerHTML = '<span>' + '<strong>' + hour + '</strong>' + ' : ' + minute + ' : ' + '<small>' + second +'</small>'+ '</span>';
-    
+            // var dayNames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+            // var d = new Date();
+            // var day = d.getDay();
+            // document.write("today"+" "+ dayNames[day])
+
             }
+        
       
         setInterval(setDate);
      
     }
+
+    var dayNames = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+    var d = new Date();
+    var day = d.getDay();
+    document.write(dayNames[day])
+    // day.style.color = "red"
+    // din.style.textcolor = "red";
     // console.log(second)
     // var s = new Date();
     // var today = s.getSeconds();
